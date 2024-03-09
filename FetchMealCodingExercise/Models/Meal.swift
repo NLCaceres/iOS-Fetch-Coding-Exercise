@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Meal {
+struct Meal: Encodable {
     var id: String
     var name: String
     var thumbnailUrlString: String

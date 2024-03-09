@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Instructions {
+struct Instructions: Encodable {
     let fullInstructions: String
     let stepByStepInstructions: [String]
     
