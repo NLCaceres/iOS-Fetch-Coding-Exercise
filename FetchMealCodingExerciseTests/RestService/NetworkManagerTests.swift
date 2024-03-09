@@ -11,10 +11,6 @@ import XCTest
 final class NetworkManagerTests: XCTestCase {
     var networkManager: NetworkManager!
 
-    enum MockError: Int, Error {
-        case someError = 1234
-    }
-
     override func setUp() {
         networkManager = AppNetworkManager(session: MockURLSession.stubURLSession())
     }
