@@ -24,6 +24,10 @@
 		BFF7252D2B9B134800D7E331 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7252C2B9B134800D7E331 /* MockURLSession.swift */; };
 		BFF7252F2B9BB82C00D7E331 /* Meal+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7252E2B9BB82B00D7E331 /* Meal+Decodable.swift */; };
 		BFF725322B9BB8BA00D7E331 /* JsonCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF725312B9BB8BA00D7E331 /* JsonCodingKey.swift */; };
+		BFF725382B9C1DAF00D7E331 /* MealAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF725372B9C1DAF00D7E331 /* MealAPIService.swift */; };
+		BFF7253A2B9C233700D7E331 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF725392B9C233700D7E331 /* MockNetworkManager.swift */; };
+		BFF7253C2B9C27D400D7E331 /* MealAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7253B2B9C27D400D7E331 /* MealAPIServiceTests.swift */; };
+		BFF7253E2B9C2B2300D7E331 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7253D2B9C2B2300D7E331 /* MockError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,10 @@
 		BFF7252C2B9B134800D7E331 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		BFF7252E2B9BB82B00D7E331 /* Meal+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+Decodable.swift"; sourceTree = "<group>"; };
 		BFF725312B9BB8BA00D7E331 /* JsonCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonCodingKey.swift; sourceTree = "<group>"; };
+		BFF725372B9C1DAF00D7E331 /* MealAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAPIService.swift; sourceTree = "<group>"; };
+		BFF725392B9C233700D7E331 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		BFF7253B2B9C27D400D7E331 /* MealAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAPIServiceTests.swift; sourceTree = "<group>"; };
+		BFF7253D2B9C2B2300D7E331 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF725242B9AE88200D7E331 /* NetworkManager.swift */,
+				BFF725372B9C1DAF00D7E331 /* MealAPIService.swift */,
 			);
 			path = RestService;
 			sourceTree = "<group>";
@@ -185,6 +194,8 @@
 			children = (
 				BFF725272B9AEDD600D7E331 /* MockURLProtocol.swift */,
 				BFF7252C2B9B134800D7E331 /* MockURLSession.swift */,
+				BFF725392B9C233700D7E331 /* MockNetworkManager.swift */,
+				BFF7253D2B9C2B2300D7E331 /* MockError.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -193,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF7252A2B9B0AD700D7E331 /* NetworkManagerTests.swift */,
+				BFF7253B2B9C27D400D7E331 /* MealAPIServiceTests.swift */,
 			);
 			path = RestService;
 			sourceTree = "<group>";
@@ -341,6 +353,7 @@
 				BFF7251C2B9AD2D500D7E331 /* Ingredient.swift in Sources */,
 				BFF7251A2B9AD2A600D7E331 /* Instructions.swift in Sources */,
 				BFF725322B9BB8BA00D7E331 /* JsonCodingKey.swift in Sources */,
+				BFF725382B9C1DAF00D7E331 /* MealAPIService.swift in Sources */,
 				BFF7252F2B9BB82C00D7E331 /* Meal+Decodable.swift in Sources */,
 				BFF724ED2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift in Sources */,
 			);
@@ -350,11 +363,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF7253A2B9C233700D7E331 /* MockNetworkManager.swift in Sources */,
 				BFF7252B2B9B0AD700D7E331 /* NetworkManagerTests.swift in Sources */,
 				BFF725282B9AEDD600D7E331 /* MockURLProtocol.swift in Sources */,
 				BFF725222B9AD7CE00D7E331 /* InstructionsTests.swift in Sources */,
 				BFF7252D2B9B134800D7E331 /* MockURLSession.swift in Sources */,
 				BFF724FE2B9AD19F00D7E331 /* FetchMealCodingExerciseTests.swift in Sources */,
+				BFF7253E2B9C2B2300D7E331 /* MockError.swift in Sources */,
+				BFF7253C2B9C27D400D7E331 /* MealAPIServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
