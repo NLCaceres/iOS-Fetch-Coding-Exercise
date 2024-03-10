@@ -29,6 +29,7 @@
 		BFF7253C2B9C27D400D7E331 /* MealAPIServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7253B2B9C27D400D7E331 /* MealAPIServiceTests.swift */; };
 		BFF7253E2B9C2B2300D7E331 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7253D2B9C2B2300D7E331 /* MockError.swift */; };
 		BFF725432B9CEB1800D7E331 /* DessertList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF725422B9CEB1800D7E331 /* DessertList.swift */; };
+		BFF725452B9DAA9E00D7E331 /* DessertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF725442B9DAA9E00D7E331 /* DessertRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BFF7253B2B9C27D400D7E331 /* MealAPIServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAPIServiceTests.swift; sourceTree = "<group>"; };
 		BFF7253D2B9C2B2300D7E331 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		BFF725422B9CEB1800D7E331 /* DessertList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertList.swift; sourceTree = "<group>"; };
+		BFF725442B9DAA9E00D7E331 /* DessertRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF725422B9CEB1800D7E331 /* DessertList.swift */,
+				BFF725442B9DAA9E00D7E331 /* DessertRow.swift */,
 			);
 			path = DessertList;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				BFF7251C2B9AD2D500D7E331 /* Ingredient.swift in Sources */,
 				BFF7251A2B9AD2A600D7E331 /* Instructions.swift in Sources */,
 				BFF725322B9BB8BA00D7E331 /* JsonCodingKey.swift in Sources */,
+				BFF725452B9DAA9E00D7E331 /* DessertRow.swift in Sources */,
 				BFF725382B9C1DAF00D7E331 /* MealAPIService.swift in Sources */,
 				BFF7252F2B9BB82C00D7E331 /* Meal+Decodable.swift in Sources */,
 				BFF725432B9CEB1800D7E331 /* DessertList.swift in Sources */,
