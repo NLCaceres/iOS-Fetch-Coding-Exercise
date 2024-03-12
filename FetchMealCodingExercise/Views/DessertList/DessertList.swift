@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct DessertList: View {
+    @StateObject private var viewModel = DessertListViewModel()
+    
     var body: some View {
         List {
             Section(content: {
-                ForEach(0..<5) { _ in
-                    DessertRow()
-                }.alignmentGuide(.listRowSeparatorLeading) { dimensions in 0 }
+                ForEach(viewModel.meals) { meal in
+                    DessertRow(dessertMeal: meal)
+                }.alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
             },
             header: {
                 HStack {
@@ -23,7 +25,7 @@ struct DessertList: View {
                     Spacer()
                 }
             })
-        }
+        }.task { await viewModel.getDessertMeals() }
         .listStyle(.plain)
         .navigationTitle("Meals")
         .navigationBarTitleDisplayMode(.inline)
