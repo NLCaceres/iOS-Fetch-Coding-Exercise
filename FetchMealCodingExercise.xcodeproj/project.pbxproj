@@ -30,6 +30,9 @@
 		BFF7253E2B9C2B2300D7E331 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7253D2B9C2B2300D7E331 /* MockError.swift */; };
 		BFF725432B9CEB1800D7E331 /* DessertList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF725422B9CEB1800D7E331 /* DessertList.swift */; };
 		BFF725452B9DAA9E00D7E331 /* DessertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF725442B9DAA9E00D7E331 /* DessertRow.swift */; };
+		BFF725472B9DADDB00D7E331 /* DessertListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF725462B9DADDB00D7E331 /* DessertListViewModel.swift */; };
+		BFF725492B9DB0C900D7E331 /* MockMealAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF725482B9DB0C900D7E331 /* MockMealAPIService.swift */; };
+		BFF7254C2B9DB20A00D7E331 /* DessertListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF7254B2B9DB20A00D7E331 /* DessertListViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +79,9 @@
 		BFF7253D2B9C2B2300D7E331 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		BFF725422B9CEB1800D7E331 /* DessertList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertList.swift; sourceTree = "<group>"; };
 		BFF725442B9DAA9E00D7E331 /* DessertRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertRow.swift; sourceTree = "<group>"; };
+		BFF725462B9DADDB00D7E331 /* DessertListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListViewModel.swift; sourceTree = "<group>"; };
+		BFF725482B9DB0C900D7E331 /* MockMealAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealAPIService.swift; sourceTree = "<group>"; };
+		BFF7254B2B9DB20A00D7E331 /* DessertListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,7 @@
 		BFF724FC2B9AD19F00D7E331 /* FetchMealCodingExerciseTests */ = {
 			isa = PBXGroup;
 			children = (
+				BFF7254A2B9DB1F600D7E331 /* ViewModels */,
 				BFF725292B9B0AA200D7E331 /* RestService */,
 				BFF725262B9AEDC500D7E331 /* Mocks */,
 				BFF725202B9AD7C000D7E331 /* Models */,
@@ -201,6 +208,7 @@
 				BFF7252C2B9B134800D7E331 /* MockURLSession.swift */,
 				BFF725392B9C233700D7E331 /* MockNetworkManager.swift */,
 				BFF7253D2B9C2B2300D7E331 /* MockError.swift */,
+				BFF725482B9DB0C900D7E331 /* MockMealAPIService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -243,8 +251,17 @@
 			children = (
 				BFF725422B9CEB1800D7E331 /* DessertList.swift */,
 				BFF725442B9DAA9E00D7E331 /* DessertRow.swift */,
+				BFF725462B9DADDB00D7E331 /* DessertListViewModel.swift */,
 			);
 			path = DessertList;
+			sourceTree = "<group>";
+		};
+		BFF7254A2B9DB1F600D7E331 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BFF7254B2B9DB20A00D7E331 /* DessertListViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +401,7 @@
 				BFF7251A2B9AD2A600D7E331 /* Instructions.swift in Sources */,
 				BFF725322B9BB8BA00D7E331 /* JsonCodingKey.swift in Sources */,
 				BFF725452B9DAA9E00D7E331 /* DessertRow.swift in Sources */,
+				BFF725472B9DADDB00D7E331 /* DessertListViewModel.swift in Sources */,
 				BFF725382B9C1DAF00D7E331 /* MealAPIService.swift in Sources */,
 				BFF7252F2B9BB82C00D7E331 /* Meal+Decodable.swift in Sources */,
 				BFF725432B9CEB1800D7E331 /* DessertList.swift in Sources */,
@@ -397,8 +415,10 @@
 			files = (
 				BFF7253A2B9C233700D7E331 /* MockNetworkManager.swift in Sources */,
 				BFF7252B2B9B0AD700D7E331 /* NetworkManagerTests.swift in Sources */,
+				BFF725492B9DB0C900D7E331 /* MockMealAPIService.swift in Sources */,
 				BFF725282B9AEDD600D7E331 /* MockURLProtocol.swift in Sources */,
 				BFF725222B9AD7CE00D7E331 /* InstructionsTests.swift in Sources */,
+				BFF7254C2B9DB20A00D7E331 /* DessertListViewModelTests.swift in Sources */,
 				BFF7252D2B9B134800D7E331 /* MockURLSession.swift in Sources */,
 				BFF724FE2B9AD19F00D7E331 /* FetchMealCodingExerciseTests.swift in Sources */,
 				BFF7253E2B9C2B2300D7E331 /* MockError.swift in Sources */,
