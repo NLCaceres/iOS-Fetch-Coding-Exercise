@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct DessertRow: View {
-    @ScaledMetric(relativeTo: .title3) var textPadding = 15
+    // Scaling based on larger Font.TextStyles reduces how much these change
+    // Using .body would produce larger values at higher Dynamic Type sizes than .title or even .title3
+    @ScaledMetric(relativeTo: .largeTitle) var textPadding = 15.0
+    @ScaledMetric(relativeTo: .largeTitle) var imageSize = 70.0
+    
+    var dessertMeal: Meal
 
     var body: some View {
         NavigationLink(destination: {
@@ -16,12 +21,12 @@ struct DessertRow: View {
         },
         label: {
             HStack {
-                AsyncImage(url: URL(string: "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg"),
+                AsyncImage(url: URL(string: dessertMeal.thumbnailUrlString),
                     content: { image in image.resizable().aspectRatio(contentMode: .fill).cornerRadius(5) },
                     placeholder: { ProgressView() }
-                ).frame(width: 70, height: 70)
+                ).frame(width: imageSize, height: imageSize)
                 
-                Text("Meal Name").padding([.leading], textPadding).font(.title3).fontWeight(.medium)
+                Text(dessertMeal.name).padding([.leading], textPadding).font(.title3).fontWeight(.medium)
             }
         })
     }
@@ -29,6 +34,7 @@ struct DessertRow: View {
 
 struct DessertRow_Previews: PreviewProvider {
     static var previews: some View {
-        DessertRow()
+        let dessert = Meal(id: "123", name: "Cake", thumbnailUrlString: "https://www.themealdb.com/images/media/meals/adxcbq1619787919.jpg")
+        DessertRow(dessertMeal: dessert)
     }
 }
