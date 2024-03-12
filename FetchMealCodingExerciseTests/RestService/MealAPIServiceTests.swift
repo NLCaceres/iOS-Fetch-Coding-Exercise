@@ -32,18 +32,16 @@ final class MealAPIServiceTests: XCTestCase {
         
         let mealsUndecodableDict = ["meals": [["id": "123", "meal": "Foo", "mealThumb": "bar.jpg"]]]
         networkManager.replacementData = try! encoder.encode(mealsUndecodableDict)
-        // WHEN the REST API returns data that can't be decoded into a Dictionary of [Meal]
-        let undecodableResult = try await mealAPI.getMealListFiltered(byCategory: "Foo")
-        // THEN the service will default return an empty array
-        XCTAssert(undecodableResult.isEmpty)
+        // WHEN the REST API returns data that can't be decoded into a Dictionary of [Meal], THEN the service throws, leaving behind nil with "try?"
+        let nilDueToDecodingError = try? await mealAPI.getMealListFiltered(byCategory: "Foo")
+        XCTAssertNil(nilDueToDecodingError)
         
         let mealsDict: [String: [Meal]?] = ["meals": nil]
         // This mealsDict encodes to { "meals": null }
         networkManager.replacementData = try! encoder.encode(mealsDict)
-        // WHEN a null Array is returned from the REST API,
-        let resultWithNilMealsArray = try await mealAPI.getMealListFiltered(byCategory: "Foo")
-        // THEN an empty list is returned by the service
-        XCTAssert(resultWithNilMealsArray.isEmpty)
+        // WHEN a null Array is returned from the REST API, THEN the service will throw since the decoded Dict handles non-optional Meal values
+        let resultWithNilMealsArray = try? await mealAPI.getMealListFiltered(byCategory: "Foo")
+        XCTAssertNil(resultWithNilMealsArray)
         
         networkManager.replacementData = try! encoder.encode(["meals": [Meal(id: "123", name: "Fizz", thumbnailUrlString: "example.com/123.jpg")]])
         // WHEN the REST API returns a typical response { "meals": [Meal] }
@@ -55,10 +53,9 @@ final class MealAPIServiceTests: XCTestCase {
         XCTAssertEqual(meal.thumbnailUrlString, "example.com/123.jpg")
         
         networkManager.error = MockError.someError
-        // WHEN the REST API fails
-        let resultOnFailure = try await mealAPI.getMealListFiltered(byCategory: "Foo")
-        // THEN the service returns an empty Array
-        XCTAssert(resultOnFailure.isEmpty)
+        // WHEN the REST API fails, THEN the service throws leaving nil with "try?"
+        let nilDueToNetworkError = try? await mealAPI.getMealListFiltered(byCategory: "Foo")
+        XCTAssertNil(nilDueToNetworkError)
     }
 
     func testGetMealByID() async throws {
@@ -71,16 +68,14 @@ final class MealAPIServiceTests: XCTestCase {
         
         let mealsUndecodableDict = ["meals": [["id": "123", "meal": "Foo", "mealThumb": "bar.jpg"]]]
         networkManager.replacementData = try! encoder.encode(mealsUndecodableDict)
-        // WHEN the REST API returns data that can't be decoded into a Dictionary of [Meal]
-        let undecodableResult = try await mealAPI.getMeal(byID: "Foo")
-        // THEN the service will return nil by default
-        XCTAssertNil(undecodableResult)
+        // WHEN the REST API returns data that can't be decoded into a Dictionary of [Meal], THEN it will throw
+        let nilDueToDecodingError = try? await mealAPI.getMeal(byID: "Foo")
+        XCTAssertNil(nilDueToDecodingError)
         
         let mealsDict: [String: [Meal]?] = ["meals": nil]
         networkManager.replacementData = try! encoder.encode(mealsDict)
-        // WHEN a null Array is returned from the REST API,
-        let resultWithNilMealsArray = try await mealAPI.getMeal(byID: "Foo")
-        // THEN the service returns nil
+        // WHEN a null Array is returned from the REST API, THEN the service will throw since the decoded Dict handles non-optional Meal values
+        let resultWithNilMealsArray = try? await mealAPI.getMeal(byID: "Foo")
         XCTAssertNil(resultWithNilMealsArray)
         
         networkManager.replacementData = try! encoder.encode(["meals": [Meal(id: "123", name: "Fizz", thumbnailUrlString: "example.com/123.jpg")]])
@@ -93,10 +88,10 @@ final class MealAPIServiceTests: XCTestCase {
         XCTAssertEqual(resultWithExpectedJSON!.thumbnailUrlString, "example.com/123.jpg")
         
         networkManager.error = MockError.someError
-        // WHEN the REST API fails
-        let resultOnFailure = try await mealAPI.getMeal(byID: "Foo")
+        // WHEN the REST API fails, THEN the service will throw
+        let nilDueToNetworkError = try? await mealAPI.getMeal(byID: "Foo")
         // THEN the service returns nil
-        XCTAssertNil(resultOnFailure)
+        XCTAssertNil(nilDueToNetworkError)
     }
 
 }
