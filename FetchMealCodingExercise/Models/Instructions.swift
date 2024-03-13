@@ -13,8 +13,13 @@ struct Instructions: Encodable {
     
     init(fullInstructions: String) {
         self.fullInstructions = fullInstructions
+
+        // Remove Carraige Returns, Newlines and whitespace from Step by Step instructions
+        var trimmableChars = CharacterSet()
+        trimmableChars.formUnion(.whitespaces)
+        trimmableChars.insert(charactersIn: "\n\r")
         self.stepByStepInstructions = fullInstructions.components(separatedBy: ".")
-            .map { $0.trimmingCharacters(in: .whitespaces) }
+            .map { $0.trimmingCharacters(in: trimmableChars) }
             .filter { !$0.isEmpty } // ONLY include strings that are NOT empty
     }
 }
