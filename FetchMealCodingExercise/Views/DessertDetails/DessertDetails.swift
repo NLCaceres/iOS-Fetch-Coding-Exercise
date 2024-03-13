@@ -14,22 +14,11 @@ struct DessertDetails: View {
     var body: some View {
         List {
             Section {
-                HStack {
-                    if let dessertMeal = viewModel.meal {
-                        AsyncImage(url: URL(string: dessertMeal.thumbnailUrlString),
-                            content: { image in image.resizable().aspectRatio(contentMode: .fill).cornerRadius(5) },
-                            placeholder: { ProgressView() }
-                        ).frame(width: 100, height: 100)
-                        
-                        Text(dessertMeal.name).padding([.leading], 15).font(.title).fontWeight(.medium)
-                    }
-                    else {
-                        Spacer()
-                        ProgressView {
-                            Text("Loading").foregroundColor(.black).font(.title3)
-                        }.frame(width: 100, height: 100).tint(.black)
-                        Spacer()
-                    }
+                if let dessertMeal = viewModel.meal {
+                    LabeledImage(label: dessertMeal.name, urlString: dessertMeal.thumbnailUrlString)
+                }
+                else {
+                    CenteredProgressView()
                 }
             }
             
