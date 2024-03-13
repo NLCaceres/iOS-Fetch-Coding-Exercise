@@ -8,11 +8,6 @@
 import SwiftUI
 
 struct DessertRow: View {
-    // Scaling based on larger Font.TextStyles reduces how much these change
-    // Using .body would produce larger values at higher Dynamic Type sizes than .title or even .title3
-    @ScaledMetric(relativeTo: .largeTitle) var textPadding = 15.0
-    @ScaledMetric(relativeTo: .largeTitle) var imageSize = 70.0
-    
     var dessertMeal: Meal
 
     var body: some View {
@@ -20,14 +15,7 @@ struct DessertRow: View {
             DessertDetails(id: dessertMeal.id)
         },
         label: {
-            HStack {
-                AsyncImage(url: URL(string: dessertMeal.thumbnailUrlString),
-                    content: { image in image.resizable().aspectRatio(contentMode: .fill).cornerRadius(5) },
-                    placeholder: { ProgressView() }
-                ).frame(width: imageSize, height: imageSize)
-                
-                Text(dessertMeal.name).padding([.leading], textPadding).font(.title3).fontWeight(.medium)
-            }
+            LabeledImage(label: dessertMeal.name, urlString: dessertMeal.thumbnailUrlString)
         })
     }
 }
