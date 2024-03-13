@@ -17,7 +17,7 @@ struct DessertRow: View {
 
     var body: some View {
         NavigationLink(destination: {
-            Text("Dessert Detail View")
+            DessertDetails(id: dessertMeal.id)
         },
         label: {
             HStack {
