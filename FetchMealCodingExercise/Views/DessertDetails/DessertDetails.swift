@@ -13,15 +13,8 @@ struct DessertDetails: View {
 
     var body: some View {
         List {
-            Section {
-                if let dessertMeal = viewModel.meal {
-                    LabeledImage(label: dessertMeal.name, urlString: dessertMeal.thumbnailUrlString)
-                }
-                else {
-                    CenteredProgressView()
-                }
-            }
-            
+            DessertDetailsTitleSection(dessertMeal: viewModel.meal)
+
             if !viewModel.errorMessage.isEmpty {
                 Section(content: {
                     HStack {
