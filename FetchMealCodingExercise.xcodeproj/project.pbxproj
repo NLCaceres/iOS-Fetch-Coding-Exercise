@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFD083DB2BA17407004D49A1 /* DessertDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD083DA2BA17407004D49A1 /* DessertDetails.swift */; };
 		BFF724ED2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF724EC2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift */; };
 		BFF724EF2B9AD19C00D7E331 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF724EE2B9AD19C00D7E331 /* ContentView.swift */; };
 		BFF724F12B9AD19E00D7E331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF724F02B9AD19E00D7E331 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BFD083DA2BA17407004D49A1 /* DessertDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetails.swift; sourceTree = "<group>"; };
 		BFF724E92B9AD19C00D7E331 /* FetchMealCodingExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchMealCodingExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF724EC2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMealCodingExerciseApp.swift; sourceTree = "<group>"; };
 		BFF724EE2B9AD19C00D7E331 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		BFF725402B9CEAF300D7E331 /* DessertDetails */ = {
 			isa = PBXGroup;
 			children = (
+				BFD083DA2BA17407004D49A1 /* DessertDetails.swift */,
 			);
 			path = DessertDetails;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				BFF7251C2B9AD2D500D7E331 /* Ingredient.swift in Sources */,
 				BFF7251A2B9AD2A600D7E331 /* Instructions.swift in Sources */,
 				BFF725322B9BB8BA00D7E331 /* JsonCodingKey.swift in Sources */,
+				BFD083DB2BA17407004D49A1 /* DessertDetails.swift in Sources */,
 				BFF725452B9DAA9E00D7E331 /* DessertRow.swift in Sources */,
 				BFF725472B9DADDB00D7E331 /* DessertListViewModel.swift in Sources */,
 				BFF725382B9C1DAF00D7E331 /* MealAPIService.swift in Sources */,
