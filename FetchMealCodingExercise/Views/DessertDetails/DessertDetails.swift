@@ -23,20 +23,8 @@ struct DessertDetails: View {
                 DessertDetailsIngredientSection(ingredients: ingredients)
             }
            
-            if let instructions = viewModel.meal?.instructions?.stepByStepInstructions {
-                Section(content: {
-                    ForEach(Array(instructions.enumerated()), id: \.0) { (index, instruction) in
-                        Text("\(index + 1). \(instruction)")
-                    }.alignmentGuide(.listRowSeparatorLeading) { dimensions in -dimensions.width / 2 }
-                },
-                header: {
-                    HStack {
-                        Text("Instructions")
-                            .font(.title).fontWeight(.bold).foregroundColor(.black)
-                            .padding([.leading], 20)
-                        Spacer()
-                    }
-                })
+            if let instructions = viewModel.meal?.instructions {
+                DessertDetailsInstructionSection(instructions: instructions)
             }
         }.task { await viewModel.getDessertMeal(byID: id) }
         .listStyle(.grouped)
