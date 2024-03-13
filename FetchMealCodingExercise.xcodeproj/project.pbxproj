@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BFD083DB2BA17407004D49A1 /* DessertDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD083DA2BA17407004D49A1 /* DessertDetails.swift */; };
+		BFD083DD2BA19878004D49A1 /* DessertDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD083DC2BA19878004D49A1 /* DessertDetailsViewModel.swift */; };
+		BFD083DF2BA1AD5D004D49A1 /* DessertDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD083DE2BA1AD5D004D49A1 /* DessertDetailsViewModelTests.swift */; };
 		BFF724ED2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF724EC2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift */; };
 		BFF724EF2B9AD19C00D7E331 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF724EE2B9AD19C00D7E331 /* ContentView.swift */; };
 		BFF724F12B9AD19E00D7E331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF724F02B9AD19E00D7E331 /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		BFD083DA2BA17407004D49A1 /* DessertDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetails.swift; sourceTree = "<group>"; };
+		BFD083DC2BA19878004D49A1 /* DessertDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsViewModel.swift; sourceTree = "<group>"; };
+		BFD083DE2BA1AD5D004D49A1 /* DessertDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		BFF724E92B9AD19C00D7E331 /* FetchMealCodingExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchMealCodingExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF724EC2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMealCodingExerciseApp.swift; sourceTree = "<group>"; };
 		BFF724EE2B9AD19C00D7E331 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				BFD083DA2BA17407004D49A1 /* DessertDetails.swift */,
+				BFD083DC2BA19878004D49A1 /* DessertDetailsViewModel.swift */,
 			);
 			path = DessertDetails;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF7254B2B9DB20A00D7E331 /* DessertListViewModelTests.swift */,
+				BFD083DE2BA1AD5D004D49A1 /* DessertDetailsViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				BFF724EF2B9AD19C00D7E331 /* ContentView.swift in Sources */,
 				BFF725182B9AD27B00D7E331 /* Meal.swift in Sources */,
 				BFF7251C2B9AD2D500D7E331 /* Ingredient.swift in Sources */,
+				BFD083DD2BA19878004D49A1 /* DessertDetailsViewModel.swift in Sources */,
 				BFF7251A2B9AD2A600D7E331 /* Instructions.swift in Sources */,
 				BFF725322B9BB8BA00D7E331 /* JsonCodingKey.swift in Sources */,
 				BFD083DB2BA17407004D49A1 /* DessertDetails.swift in Sources */,
@@ -419,6 +426,7 @@
 			files = (
 				BFF7253A2B9C233700D7E331 /* MockNetworkManager.swift in Sources */,
 				BFF7252B2B9B0AD700D7E331 /* NetworkManagerTests.swift in Sources */,
+				BFD083DF2BA1AD5D004D49A1 /* DessertDetailsViewModelTests.swift in Sources */,
 				BFF725492B9DB0C900D7E331 /* MockMealAPIService.swift in Sources */,
 				BFF725282B9AEDD600D7E331 /* MockURLProtocol.swift in Sources */,
 				BFF725222B9AD7CE00D7E331 /* InstructionsTests.swift in Sources */,
