@@ -22,12 +22,7 @@ struct DessertDetailsErrorSection: View {
             }
         },
         header: {
-            HStack {
-                Text("Sorry!")
-                    .font(.title).fontWeight(.bold).foregroundColor(.black)
-                    .padding([.leading], 20)
-                Spacer()
-            }
+            AppSectionHeader(title: "Sorry!")
         })
     }
 }

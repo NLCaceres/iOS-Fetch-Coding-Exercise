@@ -17,12 +17,7 @@ struct DessertDetailsInstructionSection: View {
             }.alignmentGuide(.listRowSeparatorLeading) { dimensions in -dimensions.width / 2 }
         },
         header: {
-            HStack {
-                Text("Instructions")
-                    .font(.title).fontWeight(.bold).foregroundColor(.black)
-                    .padding([.leading], 20)
-                Spacer()
-            }
+            AppSectionHeader(title: "Instructions")
         })
     }
 }

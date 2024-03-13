@@ -18,12 +18,7 @@ struct DessertList: View {
                 }.alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
             },
             header: {
-                HStack {
-                    Text("Desserts")
-                        .font(.title).fontWeight(.bold).foregroundColor(.black)
-                        .padding([.leading], 20)
-                    Spacer()
-                }
+                AppSectionHeader(title: "Desserts")
             })
         }.task { await viewModel.getDessertMeals() }
         .listStyle(.plain)
