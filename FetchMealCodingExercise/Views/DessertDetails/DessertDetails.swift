@@ -20,19 +20,7 @@ struct DessertDetails: View {
             }
             
             if let ingredients = viewModel.meal?.ingredients {
-                Section(content: {
-                    ForEach(Array(ingredients.enumerated()), id: \.0) { (index, ingredient) in
-                        Text("\(index + 1). \(ingredient.name.capitalized) - \(ingredient.measurement)")
-                    }.alignmentGuide(.listRowSeparatorLeading) { dimensions in -dimensions.width / 2 }
-                },
-                header: {
-                    HStack {
-                        Text("Ingredients")
-                            .font(.title).fontWeight(.bold).foregroundColor(.black)
-                            .padding([.leading], 20)
-                        Spacer()
-                    }
-                })
+                DessertDetailsIngredientSection(ingredients: ingredients)
             }
            
             if let instructions = viewModel.meal?.instructions?.stepByStepInstructions {
@@ -58,5 +46,6 @@ struct DessertDetails: View {
 struct DessertDetails_Previews: PreviewProvider {
     static var previews: some View {
         DessertDetails(id: "123")
+        DessertDetails(id: "52899")
     }
 }
