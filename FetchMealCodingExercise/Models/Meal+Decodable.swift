@@ -40,7 +40,7 @@ extension Meal: Decodable {
             let ingredientName = try fullValues.decodeIfPresent(String.self, forKey: jsonCodingKey) ?? ""
             // Once I reach the last few keys, I should start to get empty strings or null
             // which SHOULD mean I can break the loop since I have all the ingredient info
-            if ingredientName.isEmpty { break }
+            if ingredientName.trimmingCharacters(in: .whitespaces).isEmpty { break }
 
             ingredientNames.append(ingredientName)
             
@@ -56,12 +56,16 @@ extension Meal: Decodable {
         jsonCodingKey = JsonCodingKey(stringValue: "strMeasure\(ingredientNum)")
         while fullValues.contains(jsonCodingKey) {
             let ingredientMeasurement = try fullValues.decodeIfPresent(String.self, forKey: jsonCodingKey) ?? ""
-            if ingredientMeasurement.isEmpty { break }
+            // By trimming whitespace can also avoid blank strings like "    "
+            if ingredientMeasurement.trimmingCharacters(in: .whitespaces).isEmpty { break }
 
             ingredientArray.append(Ingredient(name: ingredientNames[ingredientNum - 1], measurement: ingredientMeasurement))
             
             ingredientNum += 1
             jsonCodingKey = JsonCodingKey(stringValue: "strMeasure\(ingredientNum)")
+        }
+        if !ingredientArray.isEmpty {
+            self.ingredients = ingredientArray
         }
     }
 }
