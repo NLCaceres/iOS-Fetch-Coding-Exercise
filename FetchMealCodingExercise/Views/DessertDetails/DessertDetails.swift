@@ -16,22 +16,7 @@ struct DessertDetails: View {
             DessertDetailsTitleSection(dessertMeal: viewModel.meal)
 
             if !viewModel.errorMessage.isEmpty {
-                Section(content: {
-                    HStack {
-                        Image(systemName: "takeoutbag.and.cup.and.straw.fill")
-                            .foregroundStyle(.purple, .teal).font(.system(size: 42))
-                        Text(viewModel.errorMessage)
-                            .font(.title2)
-                    }
-                },
-                header: {
-                    HStack {
-                        Text("Sorry!")
-                            .font(.title).fontWeight(.bold).foregroundColor(.black)
-                            .padding([.leading], 20)
-                        Spacer()
-                    }
-                })
+                DessertDetailsErrorSection(errorMessage: viewModel.errorMessage)
             }
             
             if let ingredients = viewModel.meal?.ingredients {
