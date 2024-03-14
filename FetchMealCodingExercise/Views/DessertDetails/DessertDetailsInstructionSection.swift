@@ -12,7 +12,7 @@ struct DessertDetailsInstructionSection: View {
     
     var body: some View {
         Section(content: {
-            ForEach(Array(instructions.stepByStepInstructions.enumerated()), id: \.0) { (index, instruction) in
+            ForEach(Array(instructions.stepByStepInstructions.enumerated()), id: \.element) { (index, instruction) in
                 Text("\(index + 1). \(instruction)")
             }.alignmentGuide(.listRowSeparatorLeading) { dimensions in -dimensions.width / 2 }
         },
