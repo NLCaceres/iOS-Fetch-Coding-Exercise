@@ -77,7 +77,6 @@ final class DessertListViewModelTests: XCTestCase {
         viewModel.$isLoading.sink {
             loadingChanged % 2 == 0 ? XCTAssertFalse($0) : XCTAssertTrue($0)
             loadingChanged += 1
-            print(loadingChanged)
             if (loadingChanged == 3) { initialCallExpectation.fulfill() }
             if (loadingChanged == 5) { errorExpectation.fulfill() }
         }.store(in: &cancellables)
