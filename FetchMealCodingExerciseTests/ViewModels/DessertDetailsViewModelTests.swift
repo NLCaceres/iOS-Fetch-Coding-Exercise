@@ -45,7 +45,7 @@ final class DessertDetailsViewModelTests: XCTestCase {
         await viewModel.getDessertMeal(byID: "123")
         // THEN the viewModel will not set the meal prop AND the errorMessage gets set, so it's no longer empty
         XCTAssertNil(viewModel.meal)
-        XCTAssert(!viewModel.errorMessage.isEmpty)
+        XCTAssertFalse(viewModel.errorMessage.isEmpty)
         
         apiService.replacementData = [Meal(id: "foo", name: "bar", thumbnailUrlString: "fizz.jpg")]
         // Even if the APIService had sent data, a thrown error prevents meal from being set and an error message is set
