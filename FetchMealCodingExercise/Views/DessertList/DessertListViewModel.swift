@@ -10,6 +10,7 @@ import Foundation
 class DessertListViewModel: ObservableObject {
     let mealAPI: MealApiService
 
+    @Published private(set) var isLoading = false
     @Published private(set) var errorMessage = ""
     @Published private(set) var meals: [Meal] = []
     
@@ -20,7 +21,11 @@ class DessertListViewModel: ObservableObject {
     // MainActor ensures publishing occurs on the Main thread while the network request occurs in the background
     @MainActor
     func getDessertMeals() async {
+        isLoading = true
+        defer { isLoading = false } // Runs no matter what (similar to a Java finally block)
+
         errorMessage = ""
+
         do {
             meals = try await mealAPI.getMealListFiltered(byCategory: "Dessert").sorted {
                 // Sorted by name alphabetically a-Z
