@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ingredient: Encodable, Hashable {
+struct Ingredient: Encodable {
     let name: String
     let measurement: String
     // The ingredient's number is important for identity, especially when a given ingredient may appear (or re-appear) in the instructions for a meal
