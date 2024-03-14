@@ -20,10 +20,12 @@ struct DessertList: View {
             header: {
                 AppSectionHeader(title: "Desserts")
             })
-        }.overlay { viewModel.isLoading ? CenteredProgressView() : nil }
+        }
+        .listStyle(.plain)
+        .overlay { viewModel.isLoading ? CenteredProgressView() : nil }
+        .overlay { viewModel.errorMessage.isEmpty ? nil : DessertListErrorSection(errorMessage: viewModel.errorMessage) }
         .task { await viewModel.getDessertMeals() }
         .refreshable { await viewModel.getDessertMeals() }
-        .listStyle(.plain)
         .navigationTitle("Meals")
         .navigationBarTitleDisplayMode(.inline)
     }
