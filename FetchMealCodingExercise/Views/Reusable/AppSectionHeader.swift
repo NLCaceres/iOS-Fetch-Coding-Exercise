@@ -9,12 +9,14 @@ import SwiftUI
 
 struct AppSectionHeader: View {
     let title: String
+    
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
 
     var body: some View {
         HStack {
             Text(title)
-                .font(.title).fontWeight(.bold).foregroundColor(.black)
-                .padding([.leading], 20)
+                .font(.title).fontWeight(.bold).foregroundColor(colorScheme == .light ? .black : .white)
+                .padding([.leading], 0)
             Spacer()
         }
     }
