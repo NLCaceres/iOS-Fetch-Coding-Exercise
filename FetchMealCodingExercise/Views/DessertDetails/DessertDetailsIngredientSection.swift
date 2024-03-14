@@ -12,7 +12,7 @@ struct DessertDetailsIngredientSection: View {
 
     var body: some View {
         Section(content: {
-            ForEach(ingredients, id: \.self) { ingredient in
+            ForEach(ingredients, id: \.number) { ingredient in
                 Text("- \(ingredient.readableStr)")
             } // The following alignment guide will not work with Inset-style Lists
             .alignmentGuide(.listRowSeparatorLeading) { dimensions in -dimensions.width / 2 }
@@ -25,7 +25,10 @@ struct DessertDetailsIngredientSection: View {
 
 struct DessertDetailsIngredientSection_Previews: PreviewProvider {
     static var previews: some View {
-        let ingredients = [Ingredient(name: "Butter", measurement: "1 cup"), Ingredient(name: "Sugar", measurement: "1/2 cup")]
+        let ingredients = [
+            Ingredient(name: "Butter", measurement: "1 cup", number: 123),
+            Ingredient(name: "Sugar", measurement: "1/2 cup", number: 321)
+        ]
         List {
             DessertDetailsIngredientSection(ingredients: ingredients)
         }
