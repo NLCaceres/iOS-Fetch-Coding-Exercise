@@ -10,11 +10,14 @@ import Foundation
 struct Ingredient: Encodable, Hashable {
     let name: String
     let measurement: String
+    // The ingredient's number is important for identity, especially when a given ingredient may appear (or re-appear) in the instructions for a meal
+    let number: Int // A lower number means it's likely an ingredient found earlier in the recipe instructions
     let readableStr: String
     
-    init(name: String, measurement: String) {
+    init(name: String, measurement: String, number: Int) {
         self.name = name
         self.measurement = measurement
+        self.number = number
         
         let capitalizedName = self.name.capitalized
         let lowercasedMeasurement = self.measurement.lowercased()

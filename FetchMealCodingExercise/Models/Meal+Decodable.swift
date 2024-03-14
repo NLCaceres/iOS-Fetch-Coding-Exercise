@@ -62,7 +62,8 @@ extension Meal: Decodable {
             ingredientArray.append(
                 Ingredient(
                     name: ingredientNames[ingredientNum - 1].trimmingCharacters(in: .whitespaces),
-                    measurement: ingredientMeasurement.trimmingCharacters(in: .whitespaces)
+                    measurement: ingredientMeasurement.trimmingCharacters(in: .whitespaces),
+                    number: ingredientNum
                 )
             )
             
