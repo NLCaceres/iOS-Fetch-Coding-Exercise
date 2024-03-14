@@ -12,13 +12,15 @@ import SwiftUI
 struct AppSectionHeader: View {
     let title: String
     
+    var textPadding = EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0)
+    
     @Environment(\.colorScheme) var colorScheme: ColorScheme
 
     var body: some View {
         HStack {
             Text(title)
                 .font(.title).fontWeight(.bold).foregroundColor(colorScheme == .light ? .black : .white)
-                .padding([.leading], 0)
+                .padding(textPadding)
             Spacer()
         }
     }
