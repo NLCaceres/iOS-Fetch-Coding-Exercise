@@ -33,7 +33,7 @@ class DessertListViewModel: ObservableObject {
             }
         }
         catch {
-            errorMessage = "Sorry seems we're having issues finding some good desserts!"
+            errorMessage = "We seem to be having issues finding some good desserts!"
         }
     }
 }

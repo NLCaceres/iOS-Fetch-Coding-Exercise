@@ -61,7 +61,7 @@ final class DessertListViewModelTests: XCTestCase {
         await viewModel.getDessertMeals()
         XCTAssert(viewModel.meals.isEmpty)
         // The following is the expected error message regardless of error caught at the moment
-        XCTAssertEqual(viewModel.errorMessage, "Sorry seems we're having issues finding some good desserts!")
+        XCTAssertEqual(viewModel.errorMessage, "We seem to be having issues finding some good desserts!")
     }
 
     func testLoadingProgression() async throws {
