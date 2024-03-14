@@ -13,6 +13,11 @@ struct DessertList: View {
     var body: some View {
         List {
             Section(content: {
+                if (viewModel.meals.isEmpty || viewModel.isLoading || !viewModel.errorMessage.isEmpty) {
+                    // Adding an empty row ensures consistent styling with plain lists
+                    // In particular, no color changes or major jumps seem to happen
+                    HStack {}.frame(height: 0).listRowSeparator(.hidden, edges: .bottom)
+                }
                 ForEach(viewModel.meals) { meal in
                     DessertRow(dessertMeal: meal)
                 }.alignmentGuide(.listRowSeparatorLeading) { _ in 0 }
