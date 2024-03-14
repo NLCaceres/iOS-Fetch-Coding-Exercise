@@ -74,6 +74,7 @@ final class DessertListViewModelTests: XCTestCase {
         // XCTestExpectations made using this XCTestCase's convenience method ensures they are fulfilled ONLY ONCE, asserting if exceeded
         let errorExpectation = self.expectation(description: "isLoading is received 5 total times despite error")
         XCTAssertFalse(viewModel.isLoading) // Starts false
+        XCTAssertTrue(viewModel.initialLoad) // Starts true
         viewModel.$isLoading.sink {
             loadingChanged % 2 == 0 ? XCTAssertFalse($0) : XCTAssertTrue($0)
             loadingChanged += 1
@@ -84,12 +85,14 @@ final class DessertListViewModelTests: XCTestCase {
         // WHEN the APIService is called, THEN isLoading changes twice, so 3 values are received by the publisher --False--True--False-->
         await viewModel.getDessertMeals()
         XCTAssertFalse(viewModel.isLoading)
+        XCTAssertFalse(viewModel.initialLoad) // Now false and will remain false
 
         apiService.error = MockError.someError
         // WHEN the APIService is called BUT fails, THEN 2 more values are still received --True--False-->
         await viewModel.getDessertMeals()
         // even though the catch block ran and set the errorMessage property
         XCTAssertFalse(viewModel.errorMessage.isEmpty)
+        XCTAssertFalse(viewModel.initialLoad)
     
         wait(for: [initialCallExpectation, errorExpectation], timeout: 2)
     }

@@ -29,7 +29,7 @@ struct DessertList: View {
         .listStyle(.plain)
         .overlay { viewModel.isLoading ? CenteredProgressView() : nil }
         .overlay { viewModel.errorMessage.isEmpty ? nil : DessertListErrorSection(errorMessage: viewModel.errorMessage) }
-        .task { await viewModel.getDessertMeals() }
+        .task { if viewModel.initialLoad { await viewModel.getDessertMeals() } }
         .refreshable { await viewModel.getDessertMeals() }
         .navigationTitle("Meals")
         .navigationBarTitleDisplayMode(.inline)
