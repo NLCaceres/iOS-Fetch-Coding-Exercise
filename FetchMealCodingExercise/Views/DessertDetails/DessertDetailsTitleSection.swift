@@ -13,7 +13,7 @@ struct DessertDetailsTitleSection: View {
     var body: some View {
         Section {
             if let dessertMeal = dessertMeal {
-                LabeledImage(label: dessertMeal.name, urlString: dessertMeal.thumbnailUrlString)
+                LabeledImage(label: dessertMeal.name, urlString: dessertMeal.thumbnailUrlString, imageSize: 100.0)
             }
             else {
                 CenteredProgressView()
