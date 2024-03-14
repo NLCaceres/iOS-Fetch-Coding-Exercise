@@ -18,6 +18,7 @@
 		BFD083EC2BA246F2004D49A1 /* DessertDetailsInstructionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD083EB2BA246F2004D49A1 /* DessertDetailsInstructionSection.swift */; };
 		BFD083EE2BA24C89004D49A1 /* AppSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD083ED2BA24C89004D49A1 /* AppSectionHeader.swift */; };
 		BFD083F02BA2D04A004D49A1 /* IngredientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD083EF2BA2D049004D49A1 /* IngredientTests.swift */; };
+		BFD083F22BA2F594004D49A1 /* DessertListErrorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD083F12BA2F593004D49A1 /* DessertListErrorSection.swift */; };
 		BFF724ED2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF724EC2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift */; };
 		BFF724EF2B9AD19C00D7E331 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF724EE2B9AD19C00D7E331 /* ContentView.swift */; };
 		BFF724F12B9AD19E00D7E331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFF724F02B9AD19E00D7E331 /* Assets.xcassets */; };
@@ -75,6 +76,7 @@
 		BFD083EB2BA246F2004D49A1 /* DessertDetailsInstructionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsInstructionSection.swift; sourceTree = "<group>"; };
 		BFD083ED2BA24C89004D49A1 /* AppSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSectionHeader.swift; sourceTree = "<group>"; };
 		BFD083EF2BA2D049004D49A1 /* IngredientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTests.swift; sourceTree = "<group>"; };
+		BFD083F12BA2F593004D49A1 /* DessertListErrorSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListErrorSection.swift; sourceTree = "<group>"; };
 		BFF724E92B9AD19C00D7E331 /* FetchMealCodingExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchMealCodingExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF724EC2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMealCodingExerciseApp.swift; sourceTree = "<group>"; };
 		BFF724EE2B9AD19C00D7E331 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				BFF725422B9CEB1800D7E331 /* DessertList.swift */,
 				BFF725442B9DAA9E00D7E331 /* DessertRow.swift */,
 				BFF725462B9DADDB00D7E331 /* DessertListViewModel.swift */,
+				BFD083F12BA2F593004D49A1 /* DessertListErrorSection.swift */,
 			);
 			path = DessertList;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD083E22BA235E6004D49A1 /* LabeledImage.swift in Sources */,
+				BFD083F22BA2F594004D49A1 /* DessertListErrorSection.swift in Sources */,
 				BFF725252B9AE88200D7E331 /* NetworkManager.swift in Sources */,
 				BFF724EF2B9AD19C00D7E331 /* ContentView.swift in Sources */,
 				BFD083EA2BA24274004D49A1 /* DessertDetailsIngredientSection.swift in Sources */,
