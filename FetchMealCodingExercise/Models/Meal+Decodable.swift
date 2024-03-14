@@ -59,7 +59,12 @@ extension Meal: Decodable {
             // By trimming whitespace can also avoid blank strings like "    "
             if ingredientMeasurement.trimmingCharacters(in: .whitespaces).isEmpty { break }
 
-            ingredientArray.append(Ingredient(name: ingredientNames[ingredientNum - 1], measurement: ingredientMeasurement))
+            ingredientArray.append(
+                Ingredient(
+                    name: ingredientNames[ingredientNum - 1].trimmingCharacters(in: .whitespaces),
+                    measurement: ingredientMeasurement.trimmingCharacters(in: .whitespaces)
+                )
+            )
             
             ingredientNum += 1
             jsonCodingKey = JsonCodingKey(stringValue: "strMeasure\(ingredientNum)")
