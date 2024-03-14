@@ -20,7 +20,8 @@ struct DessertList: View {
             header: {
                 AppSectionHeader(title: "Desserts")
             })
-        }.task { await viewModel.getDessertMeals() }
+        }.overlay { viewModel.isLoading ? CenteredProgressView() : nil }
+        .task { await viewModel.getDessertMeals() }
         .listStyle(.plain)
         .navigationTitle("Meals")
         .navigationBarTitleDisplayMode(.inline)
