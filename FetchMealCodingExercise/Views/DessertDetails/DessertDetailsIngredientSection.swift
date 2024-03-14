@@ -12,7 +12,7 @@ struct DessertDetailsIngredientSection: View {
 
     var body: some View {
         Section(content: {
-            ForEach(Array(ingredients.enumerated()), id: \.0) { (index, ingredient) in
+            ForEach(Array(ingredients.enumerated()), id: \.element) { (index, ingredient) in
                 Text("\(index + 1). \(ingredient.name.capitalized) - \(ingredient.measurement)")
             } // The following alignment guide will not work with Inset-style Lists
             .alignmentGuide(.listRowSeparatorLeading) { dimensions in -dimensions.width / 2 }

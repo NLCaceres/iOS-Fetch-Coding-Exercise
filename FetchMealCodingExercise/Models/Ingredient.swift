@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ingredient: Encodable {
+struct Ingredient: Encodable, Hashable {
     let name: String
     let measurement: String
 }
