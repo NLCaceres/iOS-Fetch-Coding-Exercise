@@ -22,6 +22,7 @@ struct DessertList: View {
             })
         }.overlay { viewModel.isLoading ? CenteredProgressView() : nil }
         .task { await viewModel.getDessertMeals() }
+        .refreshable { await viewModel.getDessertMeals() }
         .listStyle(.plain)
         .navigationTitle("Meals")
         .navigationBarTitleDisplayMode(.inline)
