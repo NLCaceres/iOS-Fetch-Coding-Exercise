@@ -77,6 +77,7 @@
 		BFD083ED2BA24C89004D49A1 /* AppSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSectionHeader.swift; sourceTree = "<group>"; };
 		BFD083EF2BA2D049004D49A1 /* IngredientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTests.swift; sourceTree = "<group>"; };
 		BFD083F12BA2F593004D49A1 /* DessertListErrorSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListErrorSection.swift; sourceTree = "<group>"; };
+		BFD083F32BA380DB004D49A1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BFF724E92B9AD19C00D7E331 /* FetchMealCodingExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchMealCodingExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF724EC2B9AD19C00D7E331 /* FetchMealCodingExerciseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchMealCodingExerciseApp.swift; sourceTree = "<group>"; };
 		BFF724EE2B9AD19C00D7E331 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 		BFF724E02B9AD19C00D7E331 = {
 			isa = PBXGroup;
 			children = (
+				BFD083F32BA380DB004D49A1 /* README.md */,
 				BFF724EB2B9AD19C00D7E331 /* FetchMealCodingExercise */,
 				BFF724FC2B9AD19F00D7E331 /* FetchMealCodingExerciseTests */,
 				BFF725062B9AD19F00D7E331 /* FetchMealCodingExerciseUITests */,
