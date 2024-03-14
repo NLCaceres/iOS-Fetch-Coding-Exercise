@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+/// Used as an app-wide List Section header, accepting a Section title String
+/// Responds to dark mode changing its font color between black and white as needed
 struct AppSectionHeader: View {
     let title: String
     
